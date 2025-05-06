@@ -21,8 +21,8 @@
 #include "../../WinRing0Dll/OlsApi.h"
 #ifdef _M_X64
 #pragma comment(lib, "WinRing0x64.lib")
-#else if
-#pragma comment(lib, "WinRing0.lib")
+//#else if
+//#pragma comment(lib, "WinRing0.lib")
 #endif
 #endif
 

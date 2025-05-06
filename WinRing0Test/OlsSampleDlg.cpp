@@ -477,11 +477,9 @@ void COlsSampleDlg::OnBnClickedRefresh()
 	Refresh();
 }
 
-BOOL IsNT()
-{
-	OSVERSIONINFO osvi;
-	osvi.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
-	GetVersionEx(&osvi);
+#include <VersionHelpers.h>
 
-	return (osvi.dwPlatformId == VER_PLATFORM_WIN32_NT);
+static BOOL IsNT()
+{
+	return IsWindowsVistaOrGreater(); // NT-based systems start from Windows 2000+, Vista is a safe cutoff
 }
